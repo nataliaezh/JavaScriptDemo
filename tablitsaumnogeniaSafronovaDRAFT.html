@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+var table = new Array(10); 
+for(var i = 0; i < table.length; i++);
+table[i] = new Array(10); 
+
+var rand = Math.floor(Math.random() * table.length);
+var random = Math.floor(Math.random() * table.length-1);
+var product=rand*random;
+
+function readInt(){
+var number = document.getElementById("userAnswer").value;
+return parseInt(number);
+}
+function write(text){
+document.getElementById("info").innerHTML = text;
+}
+
+
+function decision(){
+alert ("Первый множитель" + ":"+rand);
+alert ("Второй множитель"  + ":"+ random);
+var userAnswer = readInt();
+if (userAnswer==product){
+write ("Какая ты умничка! Да, правильный ответ:" + product);
+} else {
+write ("Подумай и введи ответ. Нажми кропку проверить. После этого ты увидишь множители еще раз. Если не помнишь, используй калькулятор или таблицу умножения! Если ты увидел эту надпись повторно, ты ввел неверный ответ, попробуй еще раз! ");
+}
+}
+</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="indexSafronova.html">Главная</a>
+		<a href="puzzleSafronova.html">Загадки</a>
+		<a href="guessSafronova.html">Угадайка</a>
+		<a href="tablitsaumnogeniaSafronovaDRAFT.html">Таблица умножения</a>
+		<a href="passwordsSafronova.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Таблица умножения</h1>
+			
+			<div class="box">
+
+				<p id="info">Найдите произведение двух множителей. Нажмите "Начать и проверить" для начала упражнения. Введите ответ и нажмите кнопку проверить! Для нового примера нажмите F5!</p>
+				<input type="text" id="userAnswer">
+				<br>
+				<a href="#" onClick="decision();" id="button">Начать и проверить!</a>	
+				<br>
+				<br>
+				<br>
+			</div>
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+	Copyright &copy; Natalia Safronova
+<div>
+
+</body>
+</html>

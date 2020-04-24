@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+		var score = 0;
+
+		function checkAnswer(inputId, answers){
+			var userAnswer = document.getElementById(inputId).value;
+			userAnswer = userAnswer.toLowerCase();
+			for(var i = 0; i < answers.length; i++){
+				if(userAnswer == answers[i]){
+					score++;
+					break;
+				}
+			}
+		}
+		
+		function checkAnswers() {
+
+			checkAnswer("userAnswer1", ["крокодил", "аллигатор"]);
+			checkAnswer("userAnswer2", ["мишка", "тишка"]);
+			checkAnswer("userAnswer3", ["лиса", "киса"]);
+
+			alert("Вы отгадали " + score + " загадки");
+
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="indexSafronova.html">Главная</a>
+		<a href="puzzleSafronova.html">Загадки</a>
+		<a href="guessSafronova.html">Угадайка</a>
+		<a href="tablitsaumnogeniaSafronovaDRAFT.html">Таблица умножения</a>
+		<a href="passwordsSafronova.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Игра в загадки</h1>
+
+			<div class="box">
+
+				<p>Он зеленый и зубастый <br>Очень хищный и опасный<br>Пять лягушек проглотил<br>Этот злобный ...?</p>
+				<input type="text" id="userAnswer1">
+
+				<p>Спит всю зиму напролет,<br> Лапу нехотя сосет<br>Любит мед, малину, шишки,<br>Это старый добрый...?</p>
+				<input type="text" id="userAnswer2">
+
+				<p>Эта рыжая плутовка,<br> Обхитрит любого ловко.<br>Хвост красивый, как коса,<br>Это хитрая ...?</p>
+				<input type="text" id="userAnswer3">
+
+				<br>
+				<a href="#" onClick="checkAnswers();">Ответить</a>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Natalia Safronova
+<div>
+
+
+</body>
+</html>

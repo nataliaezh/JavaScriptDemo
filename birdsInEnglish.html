@@ -1,0 +1,27 @@
+ 
+<metacharset="utf-8">.
+<script type="text/javascript">
+
+var birdsNames=[
+["peacock","павлин"],
+["pheasant","фазан"],
+["magpie","сорока"],
+["sparrow","воробей"],
+["pigeon","голубь"],
+["crow","ворона"],
+["eagle","орел"],
+["hawk","ястреб"],
+];
+while(birdsNames.length!=0){
+var i=parseInt(Math.random()*birdsNames.length);
+var userAnswer=prompt("Введите перевод слова" + " " +birdsNames[i][0]);
+
+if (userAnswer==birdsNames[i][1]){
+alert("Правильно!");
+birdsNames.splice(i,1);
+} else {
+	alert("Правильный ответ:"+birdsNames[i][1]);
+}
+}
+</script>
+
